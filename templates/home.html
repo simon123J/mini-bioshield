@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block title %}mini bioshield{% endblock %}
+
+{% block content %}
+  <h1>hi bestie 💙</h1>
+  <p class="subtitle">welcome to your mini bioshield dashboard.</p>
+
+  <ul class="dashboard-list">
+    <li><a href="{{ url_for('bmi') }}">check your bmi</a></li>
+    <li><a href="{{ url_for('water') }}">track today’s water intake</a></li>
+    <li><a href="{{ url_for('sleep') }}">log your sleep hours</a></li>
+    <li><a href="{{ url_for('calories') }}">see if you hit your calorie target</a></li>
+  </ul>
+{% endblock %}

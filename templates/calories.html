@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+
+{% block title %}calories check{% endblock %}
+
+{% block content %}
+  <h1>calories check</h1>
+
+  <form method="post">
+    <div>
+      <label>calorie target</label><br />
+      <input type="number" name="target" />
+    </div>
+
+    <div>
+      <label>calories eaten</label><br />
+      <input type="number" name="actual" />
+    </div>
+
+    <button type="submit">check</button>
+  </form>
+
+  {% if message %}
+    <p class="message">{{ message }}</p>
+  {% endif %}
+
+  {% if entries and entries|length > 0 %}
+    <h2 class="subtitle" style="margin-top: 14px;">recent calories history</h2>
+    <div class="history-list">
+      {% for row in entries %}
+        <div class="history-item">
+          <div>
+            <strong>target:</strong> {{ row["target"] }} •
+            <strong>actual:</strong> {{ row["actual"] }}
+          </div>
+          <div style="font-size: 0.9rem;">
+            difference: {{ row["difference"] | round(0) }}
+          </div>
+          <div style="font-size: 0.75rem; opacity: 0.7;">
+            {{ row["created_at"] }}
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  {% endif %}
+{% endblock %}

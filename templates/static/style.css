@@ -1,0 +1,172 @@
+/* RESET */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* ---------------------------------------------------
+   GLOBAL PAGE BACKGROUND
+--------------------------------------------------- */
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+
+  /* dark ocean base with glowing corners */
+  background:
+    radial-gradient(circle at top left, rgba(168, 85, 247, 0.4), transparent 55%),
+    radial-gradient(circle at bottom right, rgba(34, 197, 94, 0.35), transparent 60%),
+    linear-gradient(135deg, #0f172a, #020617);
+
+  min-height: 100vh;
+  padding-top: 70px; /* space for fixed navbar */
+  display: flex;
+  justify-content: center;
+  color: #e5e7eb;
+}
+
+/* ---------------------------------------------------
+   TOP NAVIGATION BAR (GLASS)
+--------------------------------------------------- */
+.topnav {
+  width: 100%;
+  background: rgba(15, 23, 42, 0.92);
+  padding: 12px 22px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  backdrop-filter: blur(14px);
+  z-index: 100;
+
+  box-shadow: 0 14px 35px rgba(0, 0, 0, 0.55);
+  border-bottom: 1px solid rgba(148, 163, 184, 0.22);
+}
+
+.topnav .logo {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: #f1f5f9;
+}
+
+.topnav .menu a {
+  margin-left: 16px;
+  text-decoration: none;
+  color: #cbd5f5;
+  font-size: 0.9rem;
+  padding: 6px 12px;
+  border-radius: 999px;
+
+  transition: background 0.2s ease, color 0.2s ease, transform 0.12s ease;
+}
+
+.topnav .menu a:hover {
+  background: rgba(59, 130, 246, 0.18);
+  color: #ffffff;
+  transform: translateY(-1px);
+}
+
+/* ---------------------------------------------------
+   MAIN CONTENT CARD (GLASS PANEL)
+--------------------------------------------------- */
+.container {
+  background: rgba(15, 23, 42, 0.92);
+  max-width: 450px;
+  width: 100%;
+
+  padding: 28px 24px 36px;
+  margin: 20px;
+
+  border-radius: 20px;
+  border: 1px solid rgba(148, 163, 184, 0.28);
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.65);
+}
+
+/* ---------------------------------------------------
+   HEADERS & TEXT
+--------------------------------------------------- */
+h1 {
+  font-size: 1.6rem;
+  margin-bottom: 6px;
+  color: #f3f4f6;
+}
+
+.subtitle {
+  font-size: 0.95rem;
+  color: #9ca3af;
+  margin-bottom: 16px;
+}
+
+p,
+label {
+  color: #d1d5db;
+}
+
+/* ---------------------------------------------------
+   DASHBOARD LIST
+--------------------------------------------------- */
+.dashboard-list {
+  list-style: none;
+  margin-top: 16px;
+}
+
+.dashboard-list li {
+  margin-bottom: 14px;
+}
+
+.dashboard-list a {
+  display: block;
+  padding: 12px 16px;
+
+  text-decoration: none;
+  font-size: 0.95rem;
+
+  background: rgba(55, 65, 81, 0.5);
+  border: 1px solid rgba(148, 163, 184, 0.2);
+
+  border-radius: 14px;
+  color: #e2e8f0;
+
+  transition: background 0.25s ease, transform 0.12s ease, box-shadow 0.12s ease;
+}
+
+.dashboard-list a:hover {
+  background: rgba(59, 130, 246, 0.3);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(59, 130, 246, 0.35);
+}
+
+/* ---------------------------------------------------
+   FORMS
+--------------------------------------------------- */
+form {
+  margin-bottom: 20px;
+}
+
+form div {
+  margin-bottom: 14px;
+}
+
+input[type="number"],
+input[type="text"],
+input[type="password"] {
+  width: 100%;
+  margin-top: 6px;
+  padding: 10px 12px;
+
+  border-radius: 12px;
+  border: 1px solid rgba(148, 163, 184, 0.32);
+
+  background: rgba(30, 41, 59, 0.8);
+  color: #f1f5f9;
+
+  outline: none;
+  font-size: 0.95rem;
+}
+
+input:focus {
+  border-color: #60a5fa;
+  box-sha

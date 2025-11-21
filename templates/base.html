@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+  </head>
+
+  <body>
+    <nav class="topnav">
+      <div class="logo">mini bioshield</div>
+      <div class="menu">
+        <a href="{{ url_for('home') }}">home</a>
+        <a href="{{ url_for('bmi') }}">bmi</a>
+        <a href="{{ url_for('water') }}">water</a>
+        <a href="{{ url_for('sleep') }}">sleep</a>
+        <a href="{{ url_for('calories') }}">calories</a>
+      </div>
+    </nav>
+
+    <div class="container">
+      {% block content %}{% endblock %}
+    </div>
+
+  </body>
+</html>

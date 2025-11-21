@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+{% block title %}sleep tracker{% endblock %}
+
+{% block content %}
+  <h1>sleep tracker</h1>
+
+  <form method="post">
+    <div>
+      <label>hours slept</label><br />
+      <input type="number" step="0.1" name="hours" />
+    </div>
+
+    <button type="submit">save</button>
+  </form>
+
+  {% if hours is not none %}
+    <p class="result"><strong>you entered:</strong> {{ hours }} hours</p>
+  {% endif %}
+
+  {% if message %}
+    <p class="message">{{ message }}</p>
+  {% endif %}
+
+  {% if entries and entries|length > 0 %}
+    <h2 class="subtitle" style="margin-top: 14px;">recent sleep history</h2>
+    <div class="history-list">
+      {% for row in entries %}
+        <div class="history-item">
+          <div><strong>{{ row["hours"] }} hours</strong></div>
+          <div style="font-size: 0.75rem; opacity: 0.7;">
+            {{ row["created_at"] }}
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  {% endif %}
+{% endblock %}

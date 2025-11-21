@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+
+{% block title %}register{% endblock %}
+
+{% block content %}
+  <h1>create account</h1>
+  <p class="subtitle">make a simple account for your health logs.</p>
+
+  {% with messages = get_flashed_messages() %}
+    {% if messages %}
+      <ul>
+        {% for msg in messages %}
+          <li class="message">{{ msg }}</li>
+        {% endfor %}
+      </ul>
+    {% endif %}
+  {% endwith %}
+
+  <form method="post">
+    <div>
+      <label>username</label><br />
+      <input type="text" name="username" required />
+    </div>
+
+    <div>
+      <label>password</label><br />
+      <input type="password" name="password" required />
+    </div>
+
+    <button type="submit">create account</button>
+  </form>
+
+  <p class="back-link">
+    already have an account?
+    <a href="{{ url_for('login') }}">login</a>
+  </p>
+{% endblock %}
