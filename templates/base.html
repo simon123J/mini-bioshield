@@ -2,23 +2,23 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <!-- add this line 👇 -->
+    <!-- this line makes phones size everything correctly -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>{% block title %}mini bioshield{% endblock %}</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
   </head>
   <body>
-    <div class="topnav">
+    <header class="topnav">
       <div class="logo">mini bioshield</div>
-      <div class="menu">
+      <nav class="menu">
         <a href="{{ url_for('home') }}">home</a>
         <a href="{{ url_for('bmi') }}">bmi</a>
         <a href="{{ url_for('water') }}">water</a>
         <a href="{{ url_for('sleep') }}">sleep</a>
         <a href="{{ url_for('calories') }}">calories</a>
-      </div>
-    </div>
+      </nav>
+    </header>
 
     <main class="page-shell">
       <div class="container">
