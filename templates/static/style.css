@@ -170,3 +170,162 @@ input[type="password"] {
 input:focus {
   border-color: #60a5fa;
   box-sha
+/* ---------------------------------------------------
+   HOME HERO + GRID
+--------------------------------------------------- */
+.hero {
+  margin-bottom: 18px;
+}
+
+.hero h1 {
+  font-size: 1.7rem;
+  margin-bottom: 4px;
+}
+
+.hero .subtitle {
+  margin-bottom: 0;
+}
+
+.home-grid {
+  margin-top: 18px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
+.home-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+
+  padding: 14px 12px;
+  border-radius: 16px;
+
+  background: radial-gradient(circle at top left, rgba(59, 130, 246, 0.35), transparent 55%),
+              rgba(30, 41, 59, 0.9);
+  border: 1px solid rgba(148, 163, 184, 0.35);
+
+  text-decoration: none;
+  color: #e5e7eb;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.55);
+
+  transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
+}
+
+.home-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 16px 40px rgba(37, 99, 235, 0.6);
+  border-color: rgba(96, 165, 250, 0.9);
+}
+
+.card-icon {
+  font-size: 1.5rem;
+  margin-bottom: 6px;
+}
+
+.card-title {
+  font-size: 0.98rem;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.card-text {
+  font-size: 0.8rem;
+  color: #9ca3af;
+}
+
+/* phone layout: stack cards in one column */
+@media (max-width: 480px) {
+  .home-grid {
+    grid-template-columns: 1fr;
+  }
+}
+/* ---------------------------------------------------
+   MAKE SITE RESPONSIVE ON PHONE + CENTER CONTENT
+--------------------------------------------------- */
+
+.page-shell {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 80px 16px 24px;
+}
+
+@media (max-width: 480px) {
+  .container {
+    max-width: 100%;
+  }
+}
+
+/* ---------------------------------------------------
+   HOME HERO + GRID RESPONSIVE DESIGN
+--------------------------------------------------- */
+
+.hero {
+  margin-bottom: 18px;
+}
+
+.hero h1 {
+  font-size: 1.7rem;
+  margin-bottom: 4px;
+}
+
+.hero .subtitle {
+  margin-bottom: 0;
+}
+
+.home-grid {
+  margin-top: 18px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
+.home-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+
+  padding: 14px 12px;
+  border-radius: 16px;
+
+  background: radial-gradient(circle at top left, rgba(59, 130, 246, 0.35), transparent 55%),
+              rgba(30, 41, 59, 0.9);
+  border: 1px solid rgba(148, 163, 184, 0.35);
+
+  text-decoration: none;
+  color: #e5e7eb;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.55);
+
+  transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
+}
+
+.home-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 16px 40px rgba(37, 99, 235, 0.6);
+  border-color: rgba(96, 165, 250, 0.9);
+}
+
+.card-icon {
+  font-size: 1.5rem;
+  margin-bottom: 6px;
+}
+
+.card-title {
+  font-size: 0.98rem;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.card-text {
+  font-size: 0.8rem;
+  color: #9ca3af;
+}
+
+/* phone layout: stack cards in one column */
+@media (max-width: 480px) {
+  .home-grid {
+    grid-template-columns: 1fr;
+  }
+}

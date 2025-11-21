@@ -1,13 +1,15 @@
 <!doctype html>
-<html>
+<html lang="en">
   <head>
-    <meta charset="utf-8" />
-    <title>{% block title %}{% endblock %}</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
-  </head>
+    <meta charset="utf-8">
+    <!-- add this line 👇 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
+    <title>{% block title %}mini bioshield{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  </head>
   <body>
-    <nav class="topnav">
+    <div class="topnav">
       <div class="logo">mini bioshield</div>
       <div class="menu">
         <a href="{{ url_for('home') }}">home</a>
@@ -16,11 +18,22 @@
         <a href="{{ url_for('sleep') }}">sleep</a>
         <a href="{{ url_for('calories') }}">calories</a>
       </div>
-    </nav>
-
-    <div class="container">
-      {% block content %}{% endblock %}
     </div>
 
+    <main class="page-shell">
+      <div class="container">
+        {% with messages = get_flashed_messages() %}
+          {% if messages %}
+            <ul class="flashes">
+              {% for message in messages %}
+                <li>{{ message }}</li>
+              {% endfor %}
+            </ul>
+          {% endif %}
+        {% endwith %}
+
+        {% block content %}{% endblock %}
+      </div>
+    </main>
   </body>
 </html>
