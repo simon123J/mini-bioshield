@@ -3,44 +3,19 @@
 {% block title %}home{% endblock %}
 
 {% block content %}
-  <div class="hero">
-    <h1>hello bestie 💙</h1>
-    <p class="subtitle">
-      welcome to mini bioshield. track your body, one habit at a time.
+
+<div class="hero">
+    <h2 class="welcome-title">welcome back, bestie 💙</h2>
+    <p class="welcome-subtitle">
+        your mini bioshield dashboard is ready. choose what you want to track today:
     </p>
-  </div>
+</div>
 
-  <div class="home-grid">
-    <a class="home-card card-bmi" href="{{ url_for('bmi') }}">
-      <div class="card-icon">📏</div>
-      <div class="card-title">bmi tracker</div>
-      <div class="card-text">
-        log your weight & height and watch your bmi trend over time.
-      </div>
-    </a>
+<div class="home-buttons">
+    <a class="dash-btn" href="{{ url_for('bmi') }}">check your bmi</a>
+    <a class="dash-btn" href="{{ url_for('water') }}">track water intake</a>
+    <a class="dash-btn" href="{{ url_for('sleep') }}">log sleep hours</a>
+    <a class="dash-btn" href="{{ url_for('calories') }}">track calories</a>
+</div>
 
-    <a class="home-card card-water" href="{{ url_for('water') }}">
-      <div class="card-icon">💧</div>
-      <div class="card-title">water goals</div>
-      <div class="card-text">
-        keep your body hydrated; track how many cups you drink each day.
-      </div>
-    </a>
-
-    <a class="home-card card-sleep" href="{{ url_for('sleep') }}">
-      <div class="card-icon">😴</div>
-      <div class="card-title">sleep log</div>
-      <div class="card-text">
-        record your sleep hours and notice patterns in your rest.
-      </div>
-    </a>
-
-    <a class="home-card card-calories" href="{{ url_for('calories') }}">
-      <div class="card-icon">🍽️</div>
-      <div class="card-title">calories & meals</div>
-      <div class="card-text">
-        track what you eat so you can stay closer to your goals.
-      </div>
-    </a>
-  </div>
 {% endblock %}
